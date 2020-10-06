@@ -1,20 +1,56 @@
-$backgroundColor: #141f31;
+$backgroundColor: #171d30;
+$cardBackgroundColor: #283253;
+$borderColor: #3c4b7c;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: $backgroundColor;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  background-color: $backgroundColor;
+}
+
+h1 {
+  color: white;
 }
 
 .character-table {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  overflow: auto;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 1rem;
 }
 
 .characterCard {
-  border: 2px solid black;
+  border: 0.1px solid #3c4b7c;
+  background-color: $cardBackgroundColor;
+  color: white;
   position: relative;
+  display: flex;
+  margin: 10px;
   width: 250px;
-  height: 60px;
+  height: 55px;
+}
+
+.characterCard:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.character-name {
+  padding: 15.5px;
+  background-color: $cardBackgroundColor;
+
+  text-transform: capitalize;
 }
 
 .character-thumbnail {
@@ -23,4 +59,30 @@ $backgroundColor: #141f31;
   right: 1px;
   bottom: 1px;
   object-fit: contain;
+  mask-image: linear-gradient(270deg, #000, transparent);
+}
+
+.character-header {
+  display: flex;
+  color: white;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+  border: 0.1px solid #3c4b7c;
+  h2 {
+    font-size: 2rem;
+    padding: 50px;
+    text-transform: capitalize;
+  }
+}
+
+.character-banner {
+  height: 150px;
+  mask-image: linear-gradient(270deg, #000, transparent);
+}
+
+table {
+  th {
+    border: 2px $borderColor;
+    margin: 5px;
+  }
 }

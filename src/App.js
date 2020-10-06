@@ -1,35 +1,24 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import "./App.scss";
 
-import CharacterCard from "./components/layout/CharacterCard";
-
-// import CharacterSelect from "./components/layout/CharacterSelect";
+import Home from "./components/pages/Home";
+import Character from "./components/pages/Character";
+import CharacterState from "./context/character/CharacterState";
 
 function App() {
-  const [characterList, setCharacterList] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios("http://tkn-api.herokuapp.com/character");
-      setCharacterList(result.data);
-    };
-
-    fetchData();
-  }, []);
-
-  console.log(characterList);
-
   return (
-    <div className="App">
-      <h1>Tekken 7 Frame Data App</h1>
-      {/* <CharacterSelect characterList={characterList} /> */}
-      <div className="character-table">
-        {characterList.map((character) => (
-          <CharacterCard character={character} />
-        ))}
-      </div>
-    </div>
+    <CharacterState>
+      <Router>
+        <div className="container">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/character/:name" component={Character} />
+          </Switch>
+        </div>
+      </Router>
+    </CharacterState>
   );
 }
 
