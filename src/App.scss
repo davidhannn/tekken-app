@@ -1,0 +1,26 @@
+$backgroundColor: #141f31;
+
+* {
+  box-sizing: border-box;
+}
+
+.character-table {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.characterCard {
+  border: 2px solid black;
+  position: relative;
+  width: 250px;
+  height: 60px;
+}
+
+.character-thumbnail {
+  max-height: 50px;
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  object-fit: contain;
+}
