@@ -6,49 +6,61 @@ const Character = ({ match }) => {
   console.log(match.params.name);
   const characterContext = useContext(CharacterContext);
 
+  const [moves, setMoves] = useState([]);
   const { character, getCharacter, loading } = characterContext;
 
   useEffect(() => {
     getCharacter(match.params.name);
   }, []);
 
-  console.log(character);
-
   if (loading) {
     return <Spinner />;
+  } else {
+    console.log(character.map((character) => character));
+    return (
+      <Fragment>
+        <div className="character-header">
+          <h2>{match.params.name}</h2>
+          <img
+            className="character-banner"
+            src={`/images/${match.params.name.toLowerCase()}_thumbnail.png`}
+          />
+        </div>
+
+        <table className="character-move-list">
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Range</th>
+              <th>Damage</th>
+              <th>Startup</th>
+              <th>Hit</th>
+              <th>Block</th>
+              <th>Counter</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {character.map((character) => (
+              <tr>
+                <td>{character.command}</td>
+                <td>{character.hitRange}</td>
+                <td>{character.damage}</td>
+                <td>{character.startup}</td>
+                <td>{character.hit}</td>
+                <td>{character.block}</td>
+                <td>{character.counterHit}</td>
+                <td>{character.notes}</td>
+              </tr>
+            ))}
+            {/* <tr>
+              <td></td>
+            </tr> */}
+          </tbody>
+        </table>
+      </Fragment>
+    );
   }
-
-  return (
-    <Fragment>
-      <div className="character-header">
-        <h2>{match.params.name}</h2>
-        <img
-          className="character-banner"
-          src={`/images/${match.params.name.toLowerCase()}_thumbnail.png`}
-        />
-      </div>
-
-      <table className="character-move-list">
-        <thead>
-          <tr>
-            <th>Command</th>
-            <th>Range</th>
-            <th>Damage</th>
-            <th>Startup</th>
-            <th>Hit</th>
-            <th>Block</th>
-            <th>Counter</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </Fragment>
-  );
 };
 
 export default Character;

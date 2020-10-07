@@ -18,7 +18,11 @@ const Home = () => {
 
   return (
     <Fragment>
-      <h1>Tekken 7 Frame Data App</h1>
+      <div className="logo-container">
+        <img className="tekken-logo" src={`/images/logo.png`} />
+        <h1>Frame Data</h1>
+      </div>
+
       <div className="character-table">
         {characterList.map((character) => (
           <CharacterCard character={character} />

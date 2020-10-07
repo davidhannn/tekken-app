@@ -7,7 +7,7 @@ import { GET_CHARACTER, SEARCH_CHARACTERS, SET_LOADING } from "../types";
 
 const CharacterState = (props) => {
   const initialState = {
-    character: {},
+    character: [],
     loading: false,
   };
 

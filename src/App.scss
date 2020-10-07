@@ -18,6 +18,19 @@ $borderColor: #3c4b7c;
   background-color: $backgroundColor;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  color: white;
+  img {
+    max-width: 70%;
+    max-height: 70%;
+  }
+}
+
 h1 {
   color: white;
 }
@@ -26,8 +39,23 @@ h1 {
   display: grid;
   overflow: auto;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  justify-content: center;
+  grid-template-columns: repeat(3, auto);
+  // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 1rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .character-table {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .character-table {
+    grid-template-columns: auto;
+  }
 }
 
 .characterCard {
@@ -37,7 +65,7 @@ h1 {
   position: relative;
   display: flex;
   margin: 10px;
-  width: 250px;
+  width: 270px;
   height: 55px;
 }
 
@@ -65,9 +93,10 @@ h1 {
 .character-header {
   display: flex;
   color: white;
-  margin-top: 1.5rem;
+  margin: 2rem 0;
   justify-content: space-between;
   border: 0.1px solid #3c4b7c;
+  width: 100%;
   h2 {
     font-size: 2rem;
     padding: 50px;
@@ -80,9 +109,29 @@ h1 {
   mask-image: linear-gradient(270deg, #000, transparent);
 }
 
-table {
-  th {
-    border: 2px $borderColor;
-    margin: 5px;
-  }
+character-move-list {
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: 0.1px solid #3c4b7c;
+  color: white;
+}
+
+th {
+  font-weight: 500;
+  padding: 10px;
+  text-align: left;
+  background-color: $cardBackgroundColor;
+}
+
+td {
+  text-transform: capitalize;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: $cardBackgroundColor;
 }
