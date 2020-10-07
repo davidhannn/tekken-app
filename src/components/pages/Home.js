@@ -14,8 +14,6 @@ const Home = () => {
     fetchData();
   }, []);
 
-  console.log(characterList);
-
   return (
     <Fragment>
       <div className="logo-container">
@@ -24,8 +22,8 @@ const Home = () => {
       </div>
 
       <div className="character-table">
-        {characterList.map((character) => (
-          <CharacterCard character={character} />
+        {characterList.map((character, i) => (
+          <CharacterCard character={character} key={i} />
         ))}
       </div>
     </Fragment>

@@ -13,20 +13,6 @@ const CharacterState = (props) => {
 
   const [state, dispatch] = useReducer(CharacterReducer, initialState);
 
-  //   // Search Characters
-  //   const searchUsers = async (text) => {
-  //     setLoading();
-
-  //     const res = await axios.get(
-  //       `https://api.github.com/search/users?q=${text}&client_id=${githubClientId}&client_secret=${githubClientSecret}`
-  //     );
-
-  //     dispatch({
-  //       type: SEARCH_CHARACTERS,
-  //       payload: res.data.items,
-  //     });
-  //   };
-
   // Get Character Data
   const getCharacter = async (name) => {
     setLoading();

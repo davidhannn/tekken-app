@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, Fragment } from "react";
+import React, { useEffect, useContext, Fragment } from "react";
 import CharacterContext from "../../context/character/characterContext";
 import Spinner from "../layout/Spinner";
 
@@ -6,7 +6,6 @@ const Character = ({ match }) => {
   console.log(match.params.name);
   const characterContext = useContext(CharacterContext);
 
-  const [moves, setMoves] = useState([]);
   const { character, getCharacter, loading } = characterContext;
 
   useEffect(() => {
@@ -16,7 +15,6 @@ const Character = ({ match }) => {
   if (loading) {
     return <Spinner />;
   } else {
-    console.log(character.map((character) => character));
     return (
       <Fragment>
         <div className="character-header">
