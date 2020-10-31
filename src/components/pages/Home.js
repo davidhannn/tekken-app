@@ -7,7 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("http://tkn-api.herokuapp.com/character");
+      const result = await axios("https://tkn-api.herokuapp.com/character");
       setCharacterList(result.data);
     };
 
