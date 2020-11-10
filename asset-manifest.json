@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/davidhannn/tekken-app/static/css/main.c3e69b1b.chunk.css",
-    "main.js": "/davidhannn/tekken-app/static/js/main.8eff5aab.chunk.js",
-    "main.js.map": "/davidhannn/tekken-app/static/js/main.8eff5aab.chunk.js.map",
+    "main.js": "/davidhannn/tekken-app/static/js/main.ab7ba18e.chunk.js",
+    "main.js.map": "/davidhannn/tekken-app/static/js/main.ab7ba18e.chunk.js.map",
     "runtime-main.js": "/davidhannn/tekken-app/static/js/runtime-main.4e7a4692.js",
     "runtime-main.js.map": "/davidhannn/tekken-app/static/js/runtime-main.4e7a4692.js.map",
     "static/js/2.54822618.chunk.js": "/davidhannn/tekken-app/static/js/2.54822618.chunk.js",
     "static/js/2.54822618.chunk.js.map": "/davidhannn/tekken-app/static/js/2.54822618.chunk.js.map",
     "index.html": "/davidhannn/tekken-app/index.html",
-    "precache-manifest.7cfa613e534a6842ee6e6afcb89694cc.js": "/davidhannn/tekken-app/precache-manifest.7cfa613e534a6842ee6e6afcb89694cc.js",
+    "precache-manifest.f9bab2c0b5f65e34bdd6d95a65e3a884.js": "/davidhannn/tekken-app/precache-manifest.f9bab2c0b5f65e34bdd6d95a65e3a884.js",
     "service-worker.js": "/davidhannn/tekken-app/service-worker.js",
     "static/css/main.c3e69b1b.chunk.css.map": "/davidhannn/tekken-app/static/css/main.c3e69b1b.chunk.css.map",
     "static/js/2.54822618.chunk.js.LICENSE.txt": "/davidhannn/tekken-app/static/js/2.54822618.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4e7a4692.js",
     "static/js/2.54822618.chunk.js",
     "static/css/main.c3e69b1b.chunk.css",
-    "static/js/main.8eff5aab.chunk.js"
+    "static/js/main.ab7ba18e.chunk.js"
   ]
 }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c3de0cb6f08fa1a32cf30112e854a4e9",
+    "revision": "1c73be25fbc652fe8d470e11d222abf9",
     "url": "/davidhannn/tekken-app/index.html"
   },
   {
-    "revision": "2e2ad482c1a8a29f2edd",
+    "revision": "dacc988a2d615b1eec9e",
     "url": "/davidhannn/tekken-app/static/css/main.c3e69b1b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/davidhannn/tekken-app/static/js/2.54822618.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2e2ad482c1a8a29f2edd",
-    "url": "/davidhannn/tekken-app/static/js/main.8eff5aab.chunk.js"
+    "revision": "dacc988a2d615b1eec9e",
+    "url": "/davidhannn/tekken-app/static/js/main.ab7ba18e.chunk.js"
   },
   {
     "revision": "341ef1095705d8ed2275",
